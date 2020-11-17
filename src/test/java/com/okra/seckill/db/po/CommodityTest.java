@@ -12,16 +12,16 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class CommodityTest {
 
-    @Resource
-    private SeckillCommodityMapper commodityMapper;
-    @Test
-    void CommodityTest1() {
-        SeckillCommodity commodity = new SeckillCommodity();
-        commodity.setCommodityDesc("test desc");
-        commodity.setCommodityName("test name");
-        commodity.setCommodityPrice(99);
-        commodity.setId(1L);
-        commodityMapper.insert(commodity);
-        System.out.println("====>>>>" + commodityMapper.selectByPrimaryKey(1L));
-    }
+//    @Resource
+//    private SeckillCommodityMapper commodityMapper;
+//    @Test
+//    void CommodityTest1() {
+//        SeckillCommodity commodity = new SeckillCommodity();
+//        commodity.setCommodityDesc("test desc");
+//        commodity.setCommodityName("test name");
+//        commodity.setCommodityPrice(99);
+//        commodity.setId(1L);
+//        commodityMapper.insert(commodity);
+//        System.out.println("====>>>>" + commodityMapper.selectByPrimaryKey(1L));
+//    }
 }
