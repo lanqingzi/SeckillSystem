@@ -3,7 +3,7 @@ package com.okra.seckill.db.po;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Activity {
+public class SeckillActivity {
     private Long id;
 
     private String name;

@@ -1,6 +1,6 @@
 package com.okra.seckill.db.po;
 
-import com.okra.seckill.db.mappers.CommodityMapper;
+import com.okra.seckill.db.mappers.SeckillCommodityMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,10 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class CommodityTest {
 
     @Resource
-    private CommodityMapper commodityMapper;
+    private SeckillCommodityMapper commodityMapper;
     @Test
     void CommodityTest1() {
-        Commodity commodity = new Commodity();
+        SeckillCommodity commodity = new SeckillCommodity();
         commodity.setCommodityDesc("test desc");
         commodity.setCommodityName("test name");
         commodity.setCommodityPrice(99);

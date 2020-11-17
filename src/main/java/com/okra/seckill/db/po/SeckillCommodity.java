@@ -1,6 +1,6 @@
 package com.okra.seckill.db.po;
 
-public class Commodity {
+public class SeckillCommodity {
     private Long id;
 
     private String commodityName;
