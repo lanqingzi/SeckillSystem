@@ -15,7 +15,7 @@ class RedisServiceTest {
 
     @Test
     void setStockTest() {
-        redisService.setValue("stock:19", 10L);
+        redisService.setValue("stock:19", 5L);
     }
 
     @Test

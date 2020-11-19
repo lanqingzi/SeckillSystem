@@ -3,10 +3,12 @@ package com.okra.seckill.db.dao;
 import com.okra.seckill.db.mappers.SeckillActivityMapper;
 import com.okra.seckill.db.po.SeckillActivity;
 import org.springframework.stereotype.Repository;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.annotation.Resource;
 import java.util.List;
 
+@Slf4j
 @Repository
 public class SeckillActivityDaoImpl implements SeckillActivityDao {
 
@@ -31,5 +33,25 @@ public class SeckillActivityDaoImpl implements SeckillActivityDao {
     @Override
     public void updateSeckillActivity(SeckillActivity seckillActivity) {
         seckillActivityMapper.updateByPrimaryKey(seckillActivity);
+    }
+
+    @Override
+    public boolean deductStock(long activityId) {
+        int result = seckillActivityMapper.deductStock(activityId);
+        if (result < 1) {
+            log.error("扣减库存失败");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public boolean lockStock(long activityId) {
+        int result = seckillActivityMapper.lockStock(activityId);
+        if (result < 1) {
+            log.error("锁定库存失败");
+            return false;
+        }
+        return true;
     }
 }

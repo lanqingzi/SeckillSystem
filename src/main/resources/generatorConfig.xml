@@ -52,6 +52,12 @@
         <table schema="" tableName="seckill_commodity" domainObjectName="SeckillCommodity"  enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false">
         </table>
+        <table schema="" tableName="seckill_order" domainObjectName="SeckillOrder"  enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table schema="" tableName="seckill_user" domainObjectName="SeckillUser"  enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false">
+        </table>
 
 
         <!-- 有些表的字段需要指定java类型
